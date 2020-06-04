@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>eu-Personal Gratuito</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/app2.js"></script>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <link rel="icon" type="imagem/png" href="imgs/iconEuPersonal.png" />
+
+    <script type="text/javascript">
+        window.onload = function () {
+            carregaListaAvaliacaoInicial();
+            carregaListaFichaInicial();
+            carregaListaAnotacaoInicial();
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="imgs/euPersonalFree.png" width="190" height="60" alt="euPersonalFree">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="index.html">Tela inicial</a>
+                </li>
+                <li>
+                    <a href="#avaliacaoSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Avaliação Física</a>
+                    <ul class="collapse list-unstyled" id="avaliacaoSubmenu">
+                        <li>
+                            <a href="avaliacao.html">Nova Avaliação</a>
+                        </li>
+                        <li>
+                            <a href="resultado-avaliacao.html">Resultados</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#treinoSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Treinos</a>
+                    <ul class="collapse list-unstyled" id="treinoSubmenu">
+                        <li>
+                            <a href="treino.html">Criar treino</a>
+                        </li>
+                        <li>
+                            <a href="fichas.html">Treinos prontos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#anotacaoSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Anotações</a>
+                    <ul class="collapse list-unstyled" id="anotacaoSubmenu">
+                        <li>
+                            <a href="anotacao.html">Criar anotação</a>
+                        </li>
+                        <li>
+                            <a href="resultado-anotacao.html">Lista de anotações</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="duvidas.html">Dúvidas frequentes</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="#" class="download" data-toggle="tooltip" title="Recurso ainda em desenvolvimento">Seja
+                        premium!</a>
+
+                </li>
+                <li>
+                    <p style="font-size: small;">Todos os direitos reservados</p>
+                </li>
+                <li>
+                    <p style="font-size: small;">Desenvolvido por Matheus Silva</p>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <a class="navbar-brand logo-font" href="../index.html">
+                        <img src="imgs/euPersonal.png" width="150" height="55" alt="euPersonal">
+                    </a>
+                    <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button> -->
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Personais</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Academias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contato</a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </nav>
+
+            <!-- <div class="container"> -->
+            <h2>Bem vindo ao sistema ePersonal gratuito</h2>
+            <p class="text-justify">
+                Olá personal! Você acaba de acessar o sistema gratuito e totalmente dedicado para você.
+            </p>
+            <p class="text-justify">
+                Mas antes de começar, algumas informações básicas. O sistema é gratuito, com isso o seu banco de
+                dados é limitado ao seu navegador.
+            </p>
+            <p class="text-justify">
+                Ou seja, não será possível usar os dados obtidos nesta sessão em outro navegador ou plataforma.</br>
+            </p>
+
+            <div class="line"></div>
+
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Avaliação Física</h5>
+                            <p class="card-text">Sistema de avaliação física com protocolo 3 dobras pollock.</p>
+                            <a href="avaliacao.html" class="btn btn-outline-secondary btn-sm">Realizar avaliação</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Resultados</h5>
+                            <div class="col table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Data</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="listaAvaliacoesInicial">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="resultado-avaliacao.html" class="btn btn-outline-secondary btn-sm">Verificar
+                                resultados</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <div class="line"></div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Montar treinos</h5>
+                            <p class="card-text">Sistema para criação de treinamentos para aluno(a) realizar os
+                                exercícios.</p>
+                            <a href="treino.html" class="btn btn-outline-secondary btn-sm">Criar treino</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Fichas Prontas</h5>
+                            <div class="col table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Data</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="listaFichaInicial">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="fichas.html" class="btn btn-outline-secondary btn-sm">Verificar
+                                fichas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+
+
+            <div class="line"></div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Criar anotações</h5>
+                            <p class="card-text">Sistema para criação de anotações para o personal não esquecer de seus
+                                afazeres.</p>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Ir para anotação</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Lista de anotação</h5>
+                            <div class="col table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Título</th>
+                                            <th>Data</th>
+                                            <th>Horário</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="listaAnotacaoInicial">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="resultado-anotacao.html" class="btn btn-outline-secondary btn-sm">Verificar
+                                anotações</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                    $(this).toggleClass('active');
+                });
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+</body>
+
+</html>

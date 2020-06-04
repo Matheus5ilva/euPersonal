@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>eu-Personal Gratuito</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/app2.js"></script>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+        
+        <link rel="icon" type="imagem/png" href="imgs/iconEuPersonal.png" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="imgs/euPersonalFree.png" width="190" height="60" alt="euPersonalFree">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Tela inicial</a>
+                </li>
+                <li>
+                    <a href="#avaliacaoSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Avaliação Física</a>
+                    <ul class="collapse list-unstyled" id="avaliacaoSubmenu">
+                        <li>
+                            <a href="avaliacao.html">Nova Avaliação</a>
+                        </li>
+                        <li>
+                            <a href="resultado-avaliacao.html">Resultados</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#treinoSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Treinos</a>
+                    <ul class="collapse list-unstyled" id="treinoSubmenu">
+                        <li>
+                            <a href="treino.html">Criar treino</a>
+                        </li>
+                        <li>
+                            <a href="fichas.html">Treinos prontos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#anotacaoSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle ">Anotações</a>
+                    <ul class="collapse list-unstyled " id="anotacaoSubmenu">
+                        <li>
+                            <a href="anotacao.html">Criar anotação</a>
+                        </li>
+                        <li>
+                            <a href="resultado-anotacao.html">Lista de anotações</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="duvidas.html">Dúvidas frequentes</a>
+                </li>
+                <!-- <li>
+                    <a href="#">Contato</a>
+                </li> -->
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a  class="download" data-toggle="tooltip" title="Recurso ainda em desenvolvimento" disabled="disabled">Seja
+                        premium!</a>
+
+                </li>
+                <li>
+                    <p style="font-size: small;">Todos os direitos reservados</p>
+                </li>
+                <li>
+                    <p style="font-size: small;">Desenvolvido por Matheus Silva</p>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <a class="navbar-brand logo-font" href="../index.html">
+                        <img src="imgs/euPersonal.png" width="150" height="55" alt="euPersonal">
+                    </a>
+                    <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button> -->
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Personais</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Academias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contato</a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col mb-5">
+                        <h1 class="display-5">Registro de ficha de treino</h1>
+                    </div>
+                </div>
+
+                <h4>Informações gerais</h4>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do aluno" id="nomeAluno" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="Nome do personal" id="nomePerso" />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Objetivo do treino" id="objetivo" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" data-date="" data-date-format="" class="form-control"
+                            placeholder="Data avaliação" id="dataTreino" />
+                    </div>
+                </div>
+
+                <h4>Exercícios</h4>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino1" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino1" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino1" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino1" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino1" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino2" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino2" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino2" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino2" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino2" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino3" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino3" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino3" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino3" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino3" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino4" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino4" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino4" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino4" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino4" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino5" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino5" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino5" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino5" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino5" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino6" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino6" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino6" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino6" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino6" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino7" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino7" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino7" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino7" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino7" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino8" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino8" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino8" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino8" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino8" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino9" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino9" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino9" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino9" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino9" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino10" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino10" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino10" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino10" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino10" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino11" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino11" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino11" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino11" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino11" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino12" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino12" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino12" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino12" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino12" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino13" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino13" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino13" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino13" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino13" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino14" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino14" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino14" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino14" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino14" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino15" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino15" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino15" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino15" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino15" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino16" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino16" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino16" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino16" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino16" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino17" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino17" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino17" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino17" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino17" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino18" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino18" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino18" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino18" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino18" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino19" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino19" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino19" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino19" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino19" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino20" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino20" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino20" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino20" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino20" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino21" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino21" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino21" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino21" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino21" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino22" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino22" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino22" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino22" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino22" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino23" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino23" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino23" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino23" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino23" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino24" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino24" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino24" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino24" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino24" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino25" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino25" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino25" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino25" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino25" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino26" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino26" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino26" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino26" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino26" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino27" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino27" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino27" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino27" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino27" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino28" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino28" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino28" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino28" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino28" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino29" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino29" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino29" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino29" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino29" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino30" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino30" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino30" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino30" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino30" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino31" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino31" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino31" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino31" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino31" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino32" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino32" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino32" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino32" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino32" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino33" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino33" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino33" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino33" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino33" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino34" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino34" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino34" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino34" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino34" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino35" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino35" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino35" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino35" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino35" />
+                    </div>
+                </div>
+
+                <div class="row row mb-4">
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Tipo do treino" id="tipoTreino36" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Série" id="serieTreino36" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Nome do exercício" id="exeTreino36" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" placeholder="Repetição" id="repTreino36" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="Descanso" id="descTreino36" />
+                    </div>
+                </div>
+
+
+                <!-- <div class="col-md-2 d-flex ">
+                        <button type="button" class="btn btn-warning" onclick="cadastraExercicio()">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div> -->
+                <div class="container">
+                    <div class="row mb-4">
+                        <button type="button" class="btn btn-warning" onclick="cadastraTreino()">
+                            Gerar Ficha
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalRegistraFicha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="modal_titulo_div">
+                    <h5 class="modal-title" id="modal_titulo"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal_mensagem"></div>
+                <div class="modal-footer">
+                    <button type="button" id="modal_button" data-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+
+</html>
